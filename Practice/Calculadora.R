@@ -78,12 +78,48 @@ asin(5) # arc sin x in -1 , 1
 
 acos(-8)
 
+# Numeros en coma flotante
+
+round(sqrt(2),3)
+
+trunc(sqrt(2))
+
+sqrt(2)^2
+
+sqrt(2)^2-2
 
 
+# Pasa de notacion cientifica a notacion exacta
 
+2^50
+print(2^50, 15)
 
+print(2^50, 18)
 
+print(pi,40)
 
+print(pi,30)
 
+# R se puede equivocar a partir de la 16 cifra decimal
 
+round(1.15,1)
+
+round(1.25,1)
+
+round(1.35,1)
+
+?round
+
+round(sqrt(2),0)
+
+round(digits = 5,sqrt(2))
+round(5,sqrt(2))
+
+log(x=32,base=2)
+
+log(base=2,32)
+
+floor(-3.45)
+
+trunc(-3.45)
 
