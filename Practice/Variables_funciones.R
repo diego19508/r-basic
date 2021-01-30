@@ -36,3 +36,43 @@ x = sqrt(x)
 
 # FUNCIONES
 
+funcion = f(x) = x^3
+
+f = function(x) {
+  x^3 - (3^x) * sin(x)
+  }
+
+f(4)
+
+suma1 = function (x,y){
+  x * y
+}
+
+suma1(5,7)
+
+g = function(x,y,z){
+  exp(x^2 + y^2) * sin(z)
+}
+
+
+suma5 = function(numero){
+  numero = suma1(numero);
+  numero = suma1(numero);
+  numero = suma1(numero);
+  numero = suma1(numero);
+  numero = suma1(numero);
+  suma1(numero)
+    
+}
+
+suma5(8)
+
+
+
+ls()
+
+rm(edad)
+ ls()
+
+ rm(list = ls())
+ls() 
