@@ -1,0 +1,91 @@
+---
+title: "Ejemplo de Markdown"
+author: "DMR"
+date: "2/5/2021"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+### Nuestras propias chunks
+
+Vamos a calcular $\sqrt(2) - e^{-2}$:
+
+```{r miPrimeraChunk}
+sqrt(2) - exp(2)
+```
+
+
+command + option + I
+
+```{r magic, message=FALSE}
+library(magic)
+magic(6)
+
+```
+
+
+```{r, echo=TRUE,message=TRUE,comment=NA}
+library(car)
+head(cars,3)
+
+```
+
+
+```{r, echo=TRUE,message=TRUE,comment=NA, results='hide'}
+library(car)
+head(cars,3)
+
+```
+
+```{r, echo=TRUE,message=TRUE,comment=NA, results='markup'}
+library(car)
+head(cars,3)
+
+```
+
+```{r, echo=TRUE,message=TRUE,comment=NA, results='asis'}
+library(car)
+head(cars,3)
+
+```
+
+```{r miPrimerChunk,echo=TRUE,comment=NA,results='markup'}
+sqrt(2) - exp(2)
+x
+```
+
+Cuando queremos hacer la raiz cuadrada de dos, podemos hacerlo:
+
+- En $\Latex$: $\sqrt{2}$
+
+- En `R` haciendo `r sqrt(2)`
+
+- La frase completa: $\sqrt{2}=$ `r sqrt(2)`
+
+El numerp $\pi$ empieza por `r pi`

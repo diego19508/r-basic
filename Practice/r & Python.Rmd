@@ -1,0 +1,33 @@
+---
+title: "R & Python"
+author: "DMR"
+date: "2/8/2021"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Reticulate
+
+```{r}
+library(reticulate)
+os <- import("os")
+os$listdir(".")
+```
+
+
+
+```{r}
+np <- import("numpy", convert = FALSE)
+
+x <- np$array(c(1:4))
+sum <- x$cumsum()
+
+print(sum)
+
+```
+
