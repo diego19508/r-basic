@@ -248,9 +248,43 @@ summary {
 <p>rep(1995,10) vec &lt;-c(16,0,1,20,1,7,88,5,1,9) vec fix(vec) vec fix(vec) vec</p>
 <p>vec fix(vec)</p>
 <p>vec</p>
+<div id="progresiones-aritmeticas-y-secuencias" class="section level1">
+<h1>Progresiones aritmeticas y secuencias</h1>
+<p>Una progresion aritmeitca es una sucsion de numeros tales que la diferencia, d, de cuaquier par de terminos sucesivos de la secuencia es constante.</p>
+<pre><code>                    $\ an = a1 + (n-1) . d$
+                    </code></pre>
+<div id="seqabbyd" class="section level3">
+<h3>Seq(a,b,by=d)</h3>
+<p>Para generar una progresio aritemitca de diferencia <span class="math inline">\(d\)</span> que empieza en <span class="math inline">\(a\)</span> hasta llegar a <span class="math inline">\(b\)</span></p>
+</div>
+<div id="seqablength.outn" class="section level3">
+<h3>Seq(a,b,length.out=n)</h3>
+<p>Define progresion aritmetica de longitud n que va de a a b con diferencia d. Por tanto <span class="math inline">\(\ d=(b-a)/(n-1)\)</span></p>
+</div>
+<div id="seqabydlength.outn" class="section level3">
+<h3>Seq(a,by=d,length.out=n)</h3>
+<p>Define la progresion aritmetica de longitud <span class="math inline">\(n\)</span> y diferencia <span class="math inline">\(d\)</span> que empieza en <span class="math inline">\(a\)</span></p>
+</div>
+<div id="ab" class="section level3">
+<h3>a:b</h3>
+<p>Define la secuencia de numeros enteros(z) consecutivos entre dos numeros <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span></p>
+<div id="ejemplos" class="section level4">
+<h4>Ejemplos</h4>
+<p>seq(5,60, by=5)</p>
+<p>seq(5,60, by=2.5)</p>
+<p>seq(5,60, by=3.5)</p>
+<div id="no-se-pasa-del-dato" class="section level5">
+<h5>No se pasa del dato</h5>
+<p>seq(100,6, by=9)</p>
+<p>seq(4,35,length.out=7)</p>
+<p>seq(4, length.out=5, by=3)</p>
 <!-- rnb-text-end -->
+</div>
+</div>
+</div>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OgogIHBkZl9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfZG9jdW1lbnQ6CiAgICBkZl9wcmludDogcGFnZWQKICBodG1sX25vdGVib29rOiBkZWZhdWx0Ci0tLQpjKDEsMiwzKQoKcmVwKCJNYXRlcyIsNykKCmMoKSAjIFBhcmEgZGVmaW5pciB1biB2ZWN0b3IKCnNjYW4oKSAjUGFyYSBkZWZpbmlyIHVuIHZlY3RvcgogIApmaXgoeCkgI1BhcmEgbW9kaWZpY2FyIHZpc3VhbG1lbnRlIHVuIHZlY3RvciB4CgpyZXAoYSxuKSAjUGFyYSBkZWZpbmlyIHVuIHZlY3RvciBjb25zdGFudGUgcXVlIGNvbnRpZW5lIGVsIGRhdG8gYSBycGV0aWRvIG4gdmVjZXMKCgpjKDIsVFJVRSwzLjUpCgpjKDQsNS42NywnSnVhbiBHYWJyaWVsJykKCnJlcCgxOTk1LDEwKQp2ZWMgPC1jKDE2LDAsMSwyMCwxLDcsODgsNSwxLDkpCnZlYwpmaXgodmVjKQp2ZWMKZml4KHZlYykKdmVjCgp2ZWMKZml4KHZlYykKCgp2ZWMKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OgogIHBkZl9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfZG9jdW1lbnQ6CiAgICBkZl9wcmludDogcGFnZWQKICBodG1sX25vdGVib29rOiBkZWZhdWx0Ci0tLQpjKDEsMiwzKQoKcmVwKCJNYXRlcyIsNykKCmMoKSAjIFBhcmEgZGVmaW5pciB1biB2ZWN0b3IKCnNjYW4oKSAjUGFyYSBkZWZpbmlyIHVuIHZlY3RvcgogIApmaXgoeCkgI1BhcmEgbW9kaWZpY2FyIHZpc3VhbG1lbnRlIHVuIHZlY3RvciB4CgpyZXAoYSxuKSAjUGFyYSBkZWZpbmlyIHVuIHZlY3RvciBjb25zdGFudGUgcXVlIGNvbnRpZW5lIGVsIGRhdG8gYSBycGV0aWRvIG4gdmVjZXMKCgpjKDIsVFJVRSwzLjUpCgpjKDQsNS42NywnSnVhbiBHYWJyaWVsJykKCnJlcCgxOTk1LDEwKQp2ZWMgPC1jKDE2LDAsMSwyMCwxLDcsODgsNSwxLDkpCnZlYwpmaXgodmVjKQp2ZWMKZml4KHZlYykKdmVjCgp2ZWMKZml4KHZlYykKCgp2ZWMKCiMgUHJvZ3Jlc2lvbmVzIGFyaXRtZXRpY2FzIHkgc2VjdWVuY2lhcwoKVW5hIHByb2dyZXNpb24gYXJpdG1laXRjYSBlcyB1bmEgc3Vjc2lvbiBkZSBudW1lcm9zIHRhbGVzIHF1ZSBsYSBkaWZlcmVuY2lhLCBkLCBkZSBjdWFxdWllciBwYXIgZGUgdGVybWlub3Mgc3VjZXNpdm9zIGRlIGxhIHNlY3VlbmNpYSBlcyBjb25zdGFudGUuCgogICAgICAgICAgICAgICAgICAgICAgICAkXCBhbiA9IGExICsgKG4tMSkgLiBkJAogICAgICAgICAgICAgICAgICAgICAgICAKIyMjIFNlcShhLGIsYnk9ZCkKClBhcmEgZ2VuZXJhciB1bmEgcHJvZ3Jlc2lvIGFyaXRlbWl0Y2EgZGUgZGlmZXJlbmNpYSAkZCQgcXVlIGVtcGllemEgZW4gJGEkIGhhc3RhIGxsZWdhciBhICRiJAoKIyMjIFNlcShhLGIsbGVuZ3RoLm91dD1uKQoKRGVmaW5lIHByb2dyZXNpb24gYXJpdG1ldGljYSBkZSBsb25naXR1ZCBuIHF1ZSB2YSBkZSBhIGEgYiBjb24gZGlmZXJlbmNpYSBkLiBQb3IgdGFudG8gJFwgZD0oYi1hKS8obi0xKSQKCiMjIyBTZXEoYSxieT1kLGxlbmd0aC5vdXQ9bikKCkRlZmluZSBsYSBwcm9ncmVzaW9uIGFyaXRtZXRpY2EgZGUgbG9uZ2l0dWQgJG4kIHkgZGlmZXJlbmNpYSAkZCQgcXVlIGVtcGllemEgZW4gJGEkCgojIyMgYTpiCgpEZWZpbmUgbGEgc2VjdWVuY2lhIGRlIG51bWVyb3MgZW50ZXJvcyh6KSBjb25zZWN1dGl2b3MgZW50cmUgZG9zIG51bWVyb3MgJGEkIHkgJGIkCgojIyMjIEVqZW1wbG9zCgpzZXEoNSw2MCwgYnk9NSkKCnNlcSg1LDYwLCBieT0yLjUpCgpzZXEoNSw2MCwgYnk9My41KQoKIyMjIyMgTm8gc2UgcGFzYSBkZWwgZGF0bwoKc2VxKDEwMCw2LCBieT05KQoKc2VxKDQsMzUsbGVuZ3RoLm91dD03KQoKc2VxKDQsIGxlbmd0aC5vdXQ9NSwgYnk9MykKCgo=</div>
 
 
 

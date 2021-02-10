@@ -37,3 +37,42 @@ fix(vec)
 
 vec
 
+# Progresiones aritmeticas y secuencias
+
+Una progresion aritmeitca es una sucsion de numeros tales que la diferencia, d, de cuaquier par de terminos sucesivos de la secuencia es constante.
+
+                        $\ an = a1 + (n-1) . d$
+                        
+### Seq(a,b,by=d)
+
+Para generar una progresio aritemitca de diferencia $d$ que empieza en $a$ hasta llegar a $b$
+
+### Seq(a,b,length.out=n)
+
+Define progresion aritmetica de longitud n que va de a a b con diferencia d. Por tanto $\ d=(b-a)/(n-1)$
+
+### Seq(a,by=d,length.out=n)
+
+Define la progresion aritmetica de longitud $n$ y diferencia $d$ que empieza en $a$
+
+### a:b
+
+Define la secuencia de numeros enteros(z) consecutivos entre dos numeros $a$ y $b$
+
+#### Ejemplos
+
+seq(5,60, by=5)
+
+seq(5,60, by=2.5)
+
+seq(5,60, by=3.5)
+
+##### No se pasa del dato
+
+seq(100,6, by=9)
+
+seq(4,35,length.out=7)
+
+seq(4, length.out=5, by=3)
+
+
