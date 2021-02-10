@@ -1,0 +1,197 @@
+---
+title: "Subvectores y filtros"
+author: "DMR"
+date: "2/10/2021"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Subvectores
+
+### vector[i]
+
+de la i-esima entrada del vector
+
+#### Los indices en R empiezan en 1
+
+### vector[length(vetor)]
+
+Nos da la ultima entrada del vector
+
+### vector[a:b]
+
+Si $a$ y $b$ son dos numeros naturales, nos da el subvetor con las entradas del vector original que van de la posicion $a-esima$ hasta la $b-esima$
+
+### vector[-i]
+
+Si $i$ es un numero, este subvector esta formado por todas las entradas del vector original menos la entrada $i-esima$. Si $i$ resulta ser un vector, entonces es un vctor de indices y crea un nuevo vector con las entradas del vector original, cuyos indices pertencen a $i$
+
+### vector[-x]
+
+si $x$ es un vector (de indices), entonces este es el complementario del vector$[x]$
+
+### Ejemplos
+
+v = c(14,5,6,19,32,0,8)
+v[2]
+
+v[-c(3,5)]
+
+v[v != 19 & v>15]
+
+# Condicionales
+
+Dado un vector $x$ buscan los indices que cumplen dicha condicion
+
+x = seq(3,50, by=3.5)
+x
+
+x[3]
+x[8]
+x[length(x)]
+x[length(x)-1]
+x[length(x)-2]
+
+x[-3]
+
+x[4:8]
+
+x[8:4]
+
+x[seq(2, length(x), by =2)]
+
+x[seq(1, length(x), by =2)]
+
+x[(length(x)-3):length(x)]
+
+x>30
+
+x[x%%2==1]
+x[x%%2==0]
+
+x[x>30]
+
+x = c(1,7,4,2,4,8,9,2,0)
+y = c(5,2,-3,-7,1,4,-2,7,1)
+x[y>0]
+
+x
+
+which(x>4)
+
+x[which(x>4)]
+
+which(x==min(x))
+
+which.max(x)
+
+which(x == max(x))
+
+which.max(x)
+
+which(x == max(x))
+
+x
+x[x>4 & x<7]
+
+2^pi > pi^2
+
+2^pi
+
+pi^2
+
+12345678 %%9 ==0
+
+12345678/9
+
+length(1:100) >4
+
+length(1:111) >500
+
+x = 1:10
+x[3]
+
+x[3] = 32
+
+x[11]
+
+x[11] = 15
+x
+
+x[2:5] = x[2:5] + 3
+x
+
+x[(length(x)-2):length(x)] = 0
+x
+
+# Los Valores NA
+
+x[length(x) + 5] = 9
+x
+
+NA significa not available, indica que las entradas correspondientes en ese sitio no existen
+
+sum(x)
+
+prod(x)
+
+cumsum(x)
+
+mean(x)
+
+sum(x)
+
+sum(x, na.rm = TRUE)
+
+mean(x, na.rm=TRUE)
+
+which(x == NA)
+
+is.na(x) -- Devuelve los indices cuyas entradas son NA
+
+which(is.na(x))
+
+x[which(is.na(x))]
+
+
+#### Una de las tecnicas es cambiar las NA, remplazarlas por la media
+
+x
+
+y =x
+y
+y[is.na(y)]
+
+y[is.na(y)] = mean(y, na.rm=TRUE)
+y
+
+x[is.na(x)]
+
+cumsum(x)
+
+cumsum(x,na.rm=TRUE)
+
+cumsum(x[!is.na(x)]) # Muestra en donde no hay valores NA
+
+
+na.omit(x) # Solucion drastica para eliminar NA
+
+sum(na.omit(x))
+
+cumsum(na.omit(x))
+
+#### Eliminar algunos atributos
+
+x_clean = na.omit(x)
+x_clean
+
+attr(x_clean, 'na.action') = NULL
+x_clean
+
+attr(x_clean, 'class') = NULL
+x_clean
