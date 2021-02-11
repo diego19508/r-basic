@@ -104,4 +104,8 @@ ncol(M)
 
 dim(M)
 
+sum(M)
 
+prod(M)
+
+mean()
