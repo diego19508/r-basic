@@ -1,0 +1,94 @@
+---
+title: "Factores"
+author: "DMR"
+date: "2/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Factor es como un vector, pero con una estructura interna mas rica que permite usarlo para clasificar observaciones
+
+### levels
+
+Atributo del factor. Cada elemetno del factor es igual a un nivel. Los niveles clasfican las entradas del factor. Se ordenan por orden alfabetico.
+
+Para definir un factor, primero hemos de definir un vector y transformarlo por medio de una de las funciones $factor()$ o $as.factor()$
+
+nombres = c('Juan','Antonio','Ricardo','Juan','Juan','Maria','Maria')
+nombres
+
+nombres.factor = factor(nombres)
+nombres.factor
+
+#### Vector que queramos usar para clasificar datos
+
+## La funcion factor()
+
+### factor(vector,levels=...)
+
+Define un facotr a partir del vector y dispone de algunos parametros que permiten modificar el factor que se crea:
+
+    -levels: Permite especifica los niveles e incluso anadir niveles que no aparecen en el                vector
+    
+    -labels: Permite cambiar los nombres de los niveles
+    
+### Levels(factor): 
+
+Para obtener los niveles del factor
+
+### Ejemplos:
+
+gender = c('M','H','H','M','M','M','M','H','H')
+gender.fact= factor(gender)
+gender.fact
+
+gender.fact2 = as.factor(gender)
+gender.fact2
+
+gender.fact3 =factor(gender, levels = c('M','H','H'))
+gender.fact3
+
+gender.fact4 = factor(gender, levels = c('H','H','B'), labels = c('Mujer','Hombre','Bisexual'))
+gender.fact4
+
+levels(gender.fact4)
+
+levels(gender.fact4) = c('Femenino','Masculino','Bisexual')
+gender.fact4
+
+
+notas = c(1,4,3,2,3,2,4,3,1,2,3,4,2,3,4)
+
+notas.factor = factor(notas)
+notas.factor
+
+levels(notas.factor)
+
+levels(notas.factor) = c('Suspendido','Suficiente','Notable','Excelente')
+notas.factor
+
+notas
+
+levels(notas.factor) = c('Suspendido','Aprobado','Aprobado','Aprobado')
+notas.factor
+
+## Factor ordenado
+
+### Factor ordenado
+
+Es un facotr en donde los niveles siguen un orden
+
+  -ordered(vector,levels=...)
+
+#### Ejemplo:
+
+notas
+
+ordered(notas,labels= c('Sus','Apr','Suf','Exc'))
+notas
+
+
