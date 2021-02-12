@@ -1,0 +1,94 @@
+---
+title: "Algebra Lineal"
+author: "DMR"
+date: "2/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Funcion apply()
+
+Apply(matriz, Margin=..., FUN=funcion): para aplicar otras funciones a las filas o las columnas de una matriz
+
+  -MARGIN: ha de ser 1 si queremos aplicar la funcion por filas: 2 si queremos            aplicarla por columnas: o c(1,2) si la queremos aplicar a cada entrada
+  
+### Ejemplos:
+
+apply(A,MARGIN= c(1,2), FUN = cuadrado)
+
+## Operaciones
+
+$t(matriz)$ Para obtener la transpuesta de la matriz
+
+$+$ para sumar matrices
+
+$*$ para el producto de un escalar para una matriz
+
+$%*%$ para multiplicar matrices
+
+$mtx.exp(matriz,n)$ para elevar la matriz a $n$
+
+  - Del paquete $Biodem$
+  
+    - No calcula las potencias exactas, las aproxima
+    
+$%%$ para elevar matrices
+
+  - Del paquete $expm$
+  
+    - Nocalcula las potencias exactas, las aproxima
+    
+### Ejemplos:
+
+M
+
+M%*%(M)
+
+A = matrix(c(2,1,0,0,2,1,2,3,3),nrow=3, ncol=3)
+A
+
+B = matrix(c(3,1,1,2,0,1,1,0,1),nrow=3, ncol=3)
+B
+
+A%*%B
+
+A%%2
+
+A%%3
+
+B%%3
+
+qr(M)$rank
+
+qr(A)$rank
+
+solve(A)
+
+solve()
+
+solve(A)%*%A
+
+## Operaciones
+
+- $det(matriz)$: Para calcular el determinante de la matriz
+
+- $$qr(matriz)$rank$$: Para calular el rango de una matriz
+
+- $solve(matriz)$: Para calcuar la inversa de una matriz ivertible
+
+  - Tambien sirve para resolver sistemas de ecuaciones lineales. Para ello                 introducimos $solve(matriz,b)$ donde $b$ es el vector de terminos                    independientes.
+  
+### Ejemplos:
+
+eigen(A)
+
+eigen(A)$values  
+
+eigen(A)$vectors  
+
+M = rbind(c(2,6,-8), c(0,6,-3), c(0,2,1))
+eigen(M)
+
