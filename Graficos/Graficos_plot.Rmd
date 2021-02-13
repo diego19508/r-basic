@@ -43,7 +43,7 @@ plot(f)
 
 ## Parametros de la funcion plot()
 
-```{r}
+```{r, echo=FALSE, fig.align='center'}
 n = 1:20
 fib = (1/sqrt(5))*((1+sqrt(5))/2)^n - (1/sqrt(5))*((1-sqrt(5))/2)^n
 fib
@@ -57,4 +57,10 @@ par(mfrow=c(1,1))
 
 ```
 
+## Parametros de la funcion plot()
+### 2
+
+```{r}
+plot(n, fib,pch = 21, col= "red", bg="yellow", cex=1.2, type="o", lty = "dashed", lwd = 1.5, xlim = c(1,10), ylim = c(1,100), xaxp = c(1,10,3), yaxp = c(1,100,10))
+```
 
