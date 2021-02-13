@@ -47,8 +47,13 @@ plot(f)
 n = 1:20
 fib = (1/sqrt(5))*((1+sqrt(5))/2)^n - (1/sqrt(5))*((1-sqrt(5))/2)^n
 fib
+par(mfrow = c(1,2))
 plot(fib,  xlab="n", ylab = expression(F[n]),
      main = "Sucesion de Fibonacci",pch=21, cex=2,col="powderblue",bg="orchid",log = "xy")
+
+plot(fib,  xlab="n", ylab = expression(F[n]),
+     main = "Sucesion de Fibonacci",pch=21, cex=2,col="powderblue",bg="orchid",log = "xy")
+par(mfrow=c(1,1))
 
 ```
 
