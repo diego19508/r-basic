@@ -61,6 +61,14 @@ par(mfrow=c(1,1))
 ### 2
 
 ```{r}
-plot(n, fib,pch = 21, col= "red", bg="yellow", cex=1.2, type="o", lty = "dashed", lwd = 1.5, xlim = c(1,10), ylim = c(1,100), xaxp = c(1,10,3), yaxp = c(1,100,10))
+plot(n, fib,pch = 21, col= "red", bg="yellow", cex=1.2, 
+     type="o", lty = "dashed", lwd = 1.5, xlim = c(1,10), 
+     ylim = c(1,100), xaxp = c(1,10,3), yaxp = c(1,100,10))
+```
+```{r}
+f <- function(x){
+  x^2 -2*x + sqrt(abs(x))
+}
+plot(f, xlim=(c(-3,3)), points(0,0,pch=19))
 ```
 
