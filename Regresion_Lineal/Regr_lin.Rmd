@@ -1,0 +1,49 @@
+---
+title: "Regresion Lineal"
+author: "DMR"
+date: "2/14/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+body = read.table("../data/bodyfat.txt",header=TRUE)
+body2 = body[,c(2,4)]
+names(body2) = c("Grasa","Peso")
+str(body2)
+```
+
+```{r}
+head(body2,3)
+```
+Al analizar los datos, siempre es recomendable hacer un analisis exploratorio de los datos.
+
+```{r}
+plot(body2)
+```
+## Calcular la recta de regresion
+
+Para calcular la **recta de regresion** en R se calcula mediante la instruccion
+
+$lm(y~x)$
+
+cuidado con la sintaxis: primero va el vector de las variables dependientes y, seguidamente despues de una tilde $~$, va el vector de las variables independientes.
+
+Esto se debe a que R toma el significado de la tilde como "en funcion de"
+
+Si x e y son dos variables de un data frame, para calcular la recta de reggresion de y en funcion de x podemos usar la instruccion
+
+$lm(y~x, data = data frame)$
+
+```{r}
+plot(body2)
+abline(lm(Peso~Grasa, data=body2), col="purple")
+```
+
+## Coeficiente de determinacion
+
+El **coeficiente de terminacion**, $R^2$, nos es util para evaluar numericamente si la relacion lineal obtenida es significativa o no.
+
