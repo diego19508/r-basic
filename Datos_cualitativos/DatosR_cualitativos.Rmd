@@ -1,0 +1,76 @@
+---
+title: "Datos Cualitativos"
+author: "DMR"
+date: "2/14/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Datos cualitativos
+
+Los **datos cualitativos** corresponde a observacones sobre cualidades de un objeto o individuo
+
+Suelen codifcarse por medio de palabras, pero tambien se pueden usar numeros que jueguen el papael de etiquetas.
+
+Son aquellos ques pueden ser iguales o diferentes, pero que no admiten ningun otro tipo de comparacion significativa. Es decir, que no tiene ningun sentido preguntarse si uno es mas grande que otro.
+
+- **Variable cualitativa**: lista de observaciones de un tipo de datos cualitativos sobre un conjunto concreto de objetos
+
+- **Niveles**: diferentes valores que pueden tomar estos datos. Por ejemplo, los dos nievels de una variable sexo serian M(Macho) y H(Hembra)
+
+## Estudio de Frecuencias
+
+Dada una variable cualitativa, para cada uno de sus niveles podemos contar cuantos datos hay en ese nivel (**frecuencia absoluta**) y que fraccion del total representan (**frecuencia relativa**)
+
+## Tablas de frecuencias unidimensionales
+
+```{r}
+x = sample(1:5, size = 12, replace=TRUE)
+x
+```
+```{r}
+Respuestas = factor(sample(c("Si", "No"), size = 12, replace = TRUE))
+Respuestas
+```
+
+Con R, la tabla de frecuencias absolutas de un vector que representa una variable cualitativa se calcula con a funcion **table()**
+
+```{r}
+table(x)
+```
+
+```{r}
+table(Respuestas)
+```
+
+El resultado de una funcion **table()** es un objeto de datos de un tipo nuevo: una **tabla de contingencia**, una **table** en el argot de R.
+
+Al aplicar **table()** a un vector obtenemos una tabla unidimensional formada por una fila con los niveles de la variables y una segunda fila, debajo de cada nivel, aparece su frecuenica absoluta en el vector.
+
+```{r}
+names(table(x))
+```
+
+
+```{r}
+names(table(Respuestas))
+```
+
+En la **table** de un vector solo aparecen los nombres de los niveles presentes en el vector.
+
+## Ejemplo:
+
+```{r}
+datos = factor(c("H", "M", "M", "M", "H", "H", "M","M"))
+table(datos)
+table(datos)["M"]
+sum(table(datos))
+```
+
+## Tabla de frecuencias relativas
+
+La tabla de un vector se puede calcular aplicando la funcion **prop.table()** a su **table**. El resultao vuelve a ser una tabla de contingencia unidimensional.
+
